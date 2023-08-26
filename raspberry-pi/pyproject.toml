@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "streamer"
+description = "Webservice to broadcast video data from a camera."
+version="0.0.0"
+dependencies = [
+  "flask==2.3.2",
+  "opencv-python==4.8.0.76",
+  "gunicorn==21.2.0",
+  "pyjwt==2.8.0",
+  "marshmallow==3.20.1",
+  "attrs==23.1.0",
+]
+
+[project.optional-dependencies]
+testing = [
+  "pytest==7.4.0",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["streamer"]
+namespaces = false
